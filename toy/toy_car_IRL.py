@@ -80,7 +80,7 @@ class irlAgent:
 if __name__ == '__main__':
     logger = logging.getLogger()
     logger.setLevel(logging.INFO)
-    randomPolicyFE = [ 7.74363107e+05 , 4.83296402e+04 , 6.1289194e+05  , 0.39292849e+04 , 2.0488831e+05  , 0.65611318e-37 , 6.90207523e+04 , 0.16475348]
+    randomPolicyFE = [ 7.74363107e+05 , 4.83296402e+04 , 6.1289194e+05  , 0.39292849e+04 , 2.0488831e+05  , 0.65611318e-26 , 6.90207523e+04 , 0.16475348]
     # ^the random policy feature expectations
     expertPolicyYellowFE = [7.5366e+00,  4.6350e+00  , 7.4421e+00, 3.1817e-01,  8.3398e+00,  1.3710e-08,  1.3419e+00 ,  0.0000e+00]
     # ^feature expectations for the "follow Yellow obstacles" behavior
@@ -88,7 +88,7 @@ if __name__ == '__main__':
     # ^feature expectations for the follow Red obstacles behavior
     expertPolicyBrownFE = [5.2210e+00,  5.6980e+00,  7.7984e+00,  4.8440e-01, 2.0885e-04, 9.2215e+00, 2.9386e-01 , 4.8498e-17]
     # ^feature expectations for the "follow Brown obstacles" behavior
-    expertPolicyBumpingFE = [2.07785331e+05, 4.16091998e+04, 1.29481793e+05, 8.24471458e+04, 2.02659148e+05, 1.66113784e-37, 1.98475238e+04, 0.00000000e+00]
+    expertPolicyBumpingFE = [1.62424521e+05, 7.41818200e+04, 1.61867705e+05, 6.33978371e+04, 2.27695277e+05 ,7.00162455e-26, 1.38607034e+04, 0.00000000e+00]
     # ^feature expectations for the "nasty bumping" behavior
     
 

@@ -31,7 +31,7 @@ class GameState:
         self.W = weights
         self.space = pymunk.Space()
         self.space.gravity = (0.0, -900.0)
-        self.create_car(100, 150, 10)
+        self.create_car(100, 200, 10)
         self.ball_shape = self.Signal()
         self.ticks_to_next_ball -= 1
         if (self.ticks_to_next_ball <= 0):
@@ -70,30 +70,30 @@ class GameState:
         self.obstacles.append(self.create_obstacle([270, 470], [700, 470], 2, "yellow"))
         self.obstacles.append(self.create_obstacle([350, 350], [700, 350], 2, "yellow"))
         self.obstacles.append(self.create_obstacle([700, 470], [700, 890], 2, "orange"))
-        self.obstacles.append(self.create_obstacle([700, 350], [700, 20], 2, "blueviolet"))
+        self.obstacles.append(self.create_obstacle([700, 350], [700, 20], 2, "yellow"))
         self.obstacles.append(self.create_obstacle([850, 470], [850, 770], 2, "orange"))
         self.obstacles.append(self.create_obstacle([850, 470], [850, 350], 2, "yellow"))
-        self.obstacles.append(self.create_obstacle([850, 350], [850, 110], 2, "blueviolet"))
+        self.obstacles.append(self.create_obstacle([850, 350], [850, 110], 2, "yellow"))
         self.obstacles.append(self.create_obstacle([850, 600], [800, 600], 2, "orange"))
         self.obstacles.append(self.create_obstacle([700, 800], [750, 800], 2, "orange"))
-        self.obstacles.append(self.create_obstacle([700, 250], [750, 250], 2, "blueviolet"))
-        self.obstacles.append(self.create_obstacle([800, 150], [850, 150], 2, "blueviolet"))
+        self.obstacles.append(self.create_obstacle([700, 250], [750, 250], 2, "yellow"))
+        self.obstacles.append(self.create_obstacle([800, 150], [850, 150], 2, "yellow"))
         self.obstacles.append(self.create_obstacle([700, 890], [1570, 890], 2, "orange"))
         self.obstacles.append(self.create_obstacle([850, 770], [1570, 770], 2, "orange"))
         self.obstacles.append(self.create_obstacle([1170, 860], [1170, 890], 2, "orange"))
         self.obstacles.append(self.create_obstacle([1170, 770], [1170, 800], 2, "orange"))
         self.obstacles.append(self.create_obstacle([1400, 770], [1400, 830], 2, "orange"))
         self.obstacles.append(self.create_obstacle([1570, 770], [1570, 890], 2, "orange"))
-        self.obstacles.append(self.create_obstacle([850, 110], [1300, 110], 2, "blueviolet"))
-        self.obstacles.append(self.create_obstacle([700, 20], [1450, 20], 2, "blueviolet"))
-        self.obstacles.append(self.create_obstacle([1450, 20], [1450, 500], 2, "blueviolet"))
-        self.obstacles.append(self.create_obstacle([1300, 110], [1300, 400], 2, "blueviolet"))
-        self.obstacles.append(self.create_obstacle([1100, 400], [1300, 400], 2, "blueviolet"))
-        self.obstacles.append(self.create_obstacle([1100, 500], [1450, 500], 2, "blueviolet"))
-        self.obstacles.append(self.create_obstacle([1100, 500], [1100, 400], 2, "blueviolet"))
-        self.obstacles.append(self.create_obstacle([1300, 500], [1300, 470], 2, "blueviolet"))
-        self.obstacles.append(self.create_obstacle([1300, 350], [1370, 350], 2, "blueviolet"))
-        self.obstacles.append(self.create_obstacle([1400, 150], [1450, 150], 2, "blueviolet"))
+        self.obstacles.append(self.create_obstacle([850, 110], [1300, 110], 2, "yellow"))
+        self.obstacles.append(self.create_obstacle([700, 20], [1450, 20], 2, "yellow"))
+        self.obstacles.append(self.create_obstacle([1450, 20], [1450, 500], 2, "yellow"))
+        self.obstacles.append(self.create_obstacle([1300, 110], [1300, 400], 2, "yellow"))
+        self.obstacles.append(self.create_obstacle([1100, 400], [1300, 400], 2, "yellow"))
+        self.obstacles.append(self.create_obstacle([1100, 500], [1450, 500], 2, "yellow"))
+        self.obstacles.append(self.create_obstacle([1100, 500], [1100, 400], 2, "yellow"))
+        self.obstacles.append(self.create_obstacle([1300, 500], [1300, 470], 2, "yellow"))
+        self.obstacles.append(self.create_obstacle([1300, 350], [1370, 350], 2, "yellow"))
+        self.obstacles.append(self.create_obstacle([1400, 150], [1450, 150], 2, "yellow"))
 
     def create_obstacle(self, xy1, xy2, r, color):
 
@@ -345,8 +345,6 @@ class GameState:
             return 1  # Sensor is on a yellow obstacle
         elif reading == THECOLORS['orange']:
             return 2
-        elif reading == THECOLORS['blueviolet']:
-            return 3
             # Sensor is on brown obstacle
         else:
             return 0  # for black
@@ -358,3 +356,4 @@ if __name__ == "__main__":
     while True:
         screen.fill((0,0,0))
         game_state.frame_step((random.randint(0, 2)))
+
